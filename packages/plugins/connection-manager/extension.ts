@@ -168,7 +168,7 @@ export class ConnectionManagerPlugin implements IExtensionPlugin {
 
     if (Config.sessionFilesFolder && Config.sessionFilesFolder != '') {
       baseFolder = Uri.file(Config.sessionFilesFolder);
-      if(!path.isAbsolute(Config.sessionFilesFolder && workspace.workspaceFolders && workspace.workspaceFolders.length)){
+      if(!path.isAbsolute(Config.sessionFilesFolder) && workspace.workspaceFolders && workspace.workspaceFolders.length){
         baseFolder = path.resolve(workspace.workspaceFolders[0].uri, Config.sessionFilesFolder)
       }
     }
