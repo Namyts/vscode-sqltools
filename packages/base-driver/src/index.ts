@@ -153,7 +153,6 @@ export default abstract class AbstractDriver<ConnectionType extends any, DriverO
   ) {
     const [sshTunnel] = await createTunnel(
       {
-        autoClose: true,
         reconnectOnError: false,
         ...tunnelOptions,
       },
